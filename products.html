@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>商品紹介｜学校購買部</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品紹介 - 学校購買部</title>
   <style>
-    body {
-      font-family: "Yu Gothic", sans-serif;
-      background-color: #f2f8f7;
-      color: #333;
+    :root {
+      --main-color: #008a3f;
+      --accent-color: #e6f4ec;
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    header {
-      background-color: #cfeae7;
-      padding: 20px;
-      text-align: center;
+    body {
+      font-family: "Yu Gothic", sans-serif;
+      background-color: #f2f8f7;
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #3a5a5c;
+    header {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 20px;
     }
 
     nav {
-      background-color: #a6d5cf;
+      background-color: #06a54a;
       text-align: center;
-      padding: 10px 0;
+      padding: 10px;
     }
 
     nav a {
-      margin: 0 10px;
-      color: #fff;
+      color: white;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-      font-size: 0.95em;
     }
 
     main {
-      padding: 20px;
+      padding: 30px 15px;
       text-align: center;
     }
 
     h2 {
-      color: #3a5a5c;
+      color: var(--main-color);
       margin-bottom: 20px;
     }
 
     .product {
-      background-color: #fff;
+      background-color: white;
       border-radius: 10px;
-      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       margin: 20px auto;
       max-width: 500px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
     }
 
     .product img {
@@ -65,29 +70,29 @@
     }
 
     footer {
-      background-color: #cfeae7;
+      background-color: var(--main-color);
+      color: white;
       text-align: center;
       padding: 15px;
-      font-size: 0.85em;
-      color: #666;
+      font-size: 0.9em;
     }
 
     @media (max-width: 600px) {
       nav a {
-        display: inline-block;
-        margin: 5px;
+        display: block;
+        margin: 10px 0;
       }
 
       .product {
-        margin: 15px 10px;
+        margin: 20px 10px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>学校購買部</h1>
+    <p>便利で楽しい、毎日の学校生活に</p>
   </header>
 
   <nav>
@@ -101,37 +106,29 @@
   </nav>
 
   <main>
-    <h2>文房具・アイテム紹介</h2>
+    <h2>商品紹介</h2>
 
     <div class="product">
       <h3>文房具セット</h3>
-      <img src="https://placehold.co/400x250?text=文房具セット" alt="文房具セット">
-      <p>定規・消しゴム・ボールペンなど、毎日の授業に必要な基本セット。</p>
+      <img src="https://placehold.co/400x300?text=文房具セット" alt="文房具セット">
+      <p>授業に欠かせないペン・ノート・定規などをセットにしました。</p>
     </div>
 
     <div class="product">
-      <h3>クラブ活動タオル</h3>
-      <img src="https://placehold.co/400x250?text=クラブタオル" alt="クラブ活動タオル">
-      <p>汗をしっかり吸収！部活生に人気のロゴ入りタオルです。</p>
+      <h3>クラブ用タオル</h3>
+      <img src="https://placehold.co/400x300?text=クラブ用タオル" alt="クラブ用タオル">
+      <p>吸水性抜群！部活に最適な厚手のタオル。</p>
     </div>
 
     <div class="product">
-      <h3>マスキングテープ</h3>
-      <img src="https://placehold.co/400x250?text=マスキングテープ" alt="マスキングテープ">
-      <p>可愛いデザインでノートや手帳を飾れます。</p>
+      <h3>購買限定マグカップ</h3>
+      <img src="https://placehold.co/400x300?text=限定マグカップ" alt="限定マグカップ">
+      <p>学校ロゴ入りのおしゃれなマグ。数量限定販売中！</p>
     </div>
-
-    <div class="product">
-      <h3>オリジナルノート</h3>
-      <img src="https://placehold.co/400x250?text=オリジナルノート" alt="オリジナルノート">
-      <p>学校のロゴ入りノート。勉強もはかどる限定デザイン！</p>
-    </div>
-
   </main>
 
   <footer>
-    ⓒ 2025 学校購買部｜このサイトは学校課題の創作です。
+    &copy; 2025 学校購買部｜このサイトは課題研究用に作成された架空のウェブサイトです。
   </footer>
-
 </body>
 </html>
