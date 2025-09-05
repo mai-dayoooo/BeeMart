@@ -1,90 +1,76 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>商品紹介 - 学校購買部</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学校購買部 - 商品紹介</title>
   <style>
-    :root {
-      --main-color: #008a3f;
-      --accent-color: #d6f2e1;
-      --text-color: #333;
+    /* ==== マウスストーカー ==== */
+    .mouse-stalker {
+      width: 20px;
+      height: 20px;
+      background-color: rgba(0, 138, 63, 0.6);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: top 0.15s ease-out, left 0.15s ease-out;
     }
 
-    * {
-      box-sizing: border-box;
+    /* ==== 基本スタイル ==== */
+    body {
+      font-family: "Yu Gothic", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
       margin: 0;
       padding: 0;
     }
-
-    body {
-      font-family: "Yu Gothic", sans-serif;
-      background-color: #ffffff;
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--main-color);
+    header, footer {
+      background-color: #005a2c;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 1em;
     }
-
     nav {
-      background-color: #006b32;
+      background-color: #008a3f;
       text-align: center;
-      padding: 10px;
     }
-
     nav a {
       color: white;
+      display: inline-block;
+      padding: 1em;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
     }
-
+    nav a:hover {
+      background-color: #006b2a;
+    }
     main {
-      padding: 30px 15px;
+      padding: 2em;
       text-align: center;
     }
-
-    h2 {
-      color: var(--main-color);
-      margin-bottom: 20px;
-    }
-
     .product {
-      background-color: #f4f9f6;
+      background: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      margin: 20px auto;
-      max-width: 500px;
-      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 1.5em auto;
+      max-width: 600px;
+      padding: 1.5em;
     }
-
     .product img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 5px;
     }
-
-    footer {
-      background-color: var(--main-color);
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
+    .product h3 {
+      color: #008a3f;
     }
-
     @media (max-width: 600px) {
       nav a {
         display: block;
-        margin: 10px 0;
-      }
-
-      .product {
-        margin: 20px 10px;
+        padding: 0.8em;
       }
     }
   </style>
@@ -92,14 +78,13 @@
 <body>
   <header>
     <h1>学校購買部</h1>
-    <p>便利で楽しい、毎日の学校生活に</p>
+    <p>みんなの学校生活をサポート！</p>
   </header>
 
   <nav>
     <a href="index.html">ホーム</a>
     <a href="products.html">商品紹介</a>
     <a href="bento.html">お弁当</a>
-    <a href="ranking.html">人気ランキング</a>
     <a href="about.html">購買部について</a>
     <a href="hours.html">営業時間</a>
     <a href="contact.html">お問い合わせ</a>
@@ -107,28 +92,37 @@
 
   <main>
     <h2>商品紹介</h2>
-
     <div class="product">
       <h3>マーカーセット</h3>
-      <img src="https://placehold.co/400x300?text=文房具セット" alt="文房具セット">
-      <p>授業ノートを見やすくまとめるのにぴったり！</p>
+      <img src="https://placehold.co/500x300?text=%E3%83%9E%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%BB%E3%83%83%E3%83%88" alt="マーカーセット">
+      <p>授業ノートを見やすくまとめるのにぴったりのカラフルなマーカー。</p>
     </div>
 
     <div class="product">
       <h3>カラーファイル</h3>
-      <img src="https://placehold.co/400x300?text=クラブ用タオル" alt="クラブ用タオル">
-      <p>授業で配られたプリントをきれいに整理！</p>
+      <img src="https://placehold.co/500x300?text=%E3%82%AB%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" alt="カラーファイル">
+      <p>授業で配られるプリントをきれいに整理できるファイルです。</p>
     </div>
 
     <div class="product">
-      <h3>あああああああああ</h3>
-      <img src="https://placehold.co/400x300?text=限定マグカップ" alt="限定マグカップ">
-      <p>ああああああああ</p>
+      <h3>シャープペンシル</h3>
+      <img src="https://placehold.co/500x300?text=%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%97%E3%83%9A%E3%83%B3" alt="シャープペンシル">
+      <p>長時間の勉強にも疲れにくい設計の人気シャープペン。</p>
     </div>
   </main>
 
+  <!-- マウスストーカー -->
+  <div class="mouse-stalker"></div>
+  <script>
+    const stalker = document.querySelector('.mouse-stalker');
+    document.addEventListener('mousemove', (e) => {
+      stalker.style.top = e.clientY + "px";
+      stalker.style.left = e.clientX + "px";
+    });
+  </script>
+
   <footer>
-    &copy; 2025 学校購買部｜このサイトは課題研究用に作成された架空のウェブサイトです。
+    <p>© 2025 学校購買部 | 課題研究用の創作サイトです。</p>
   </footer>
 </body>
 </html>
