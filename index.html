@@ -1,10 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>学校購買部 - 商品紹介</title>
+  <title>学校購買部 - ホーム</title>
   <style>
+    /* ==== マウスストーカー ==== */
+    .mouse-stalker {
+      width: 20px;
+      height: 20px;
+      background-color: rgba(0, 138, 63, 0.6);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: top 0.15s ease-out, left 0.15s ease-out;
+    }
+
+    /* ==== 基本スタイル ==== */
     body {
       font-family: "Yu Gothic", sans-serif;
       background-color: #f9f9f9;
@@ -35,18 +52,13 @@
       padding: 2em;
       text-align: center;
     }
-    .product {
+    .intro {
+      max-width: 700px;
+      margin: 0 auto;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin: 1em auto;
-      max-width: 600px;
-      padding: 1em;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
+      padding: 2em;
     }
     @media (max-width: 600px) {
       nav a {
@@ -66,31 +78,31 @@
     <a href="index.html">ホーム</a>
     <a href="products.html">商品紹介</a>
     <a href="bento.html">お弁当</a>
-    <a href="ranking.html">人気ランキング</a>
     <a href="about.html">購買部について</a>
     <a href="hours.html">営業時間</a>
     <a href="contact.html">お問い合わせ</a>
   </nav>
 
   <main>
-    <h2>商品紹介</h2>
-    <div class="product">
-      <h3>マーカーセット</h3>
-      <img src="https://placehold.co/300x200?text=%E6%96%87%E6%88%BF%E5%85%B7" alt="文房具">
-      <p>授業ノートを見やすくまとめるのにぴったり！</p>
-    </div>
-    <div class="product">
-      <h3>カラーファイル</h3>
-      <img src="https://placehold.co/300x200?text=%E3%82%BF%E3%82%AA%E3%83%AB" alt="タオル">
-      <p>授業で配られたプリントをきれいに整理！</p>
-    </div>
-    <div class="product">
-      <h3>あああああああ</h3>
-      <img src="https://placehold.co/300x200?text=%E3%82%AF%E3%83%AA%E3%82%A2%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" alt="クリアファイル">
-      <p>ああああああああああああ</p>
+    <div class="intro">
+      <h2>ようこそ 学校購買部へ</h2>
+      <p>
+        学校購買部は、文房具から日用品、さらに毎日のお弁当まで<br>
+        学校生活に欠かせないアイテムを幅広く取りそろえています。<br><br>
+        便利で楽しい学校生活をサポートする購買部を、ぜひご利用ください！
+      </p>
     </div>
   </main>
 
+  <!-- マウスストーカー -->
+  <div class="mouse-stalker"></div>
+  <script>
+    const stalker = document.querySelector('.mouse-stalker');
+    document.addEventListener('mousemove', (e) => {
+      stalker.style.top = e.clientY + "px";
+      stalker.style.left = e.clientX + "px";
+    });
+  </script>
 
   <footer>
     <p>© 2025 学校購買部 | 課題研究用の創作サイトです。</p>
