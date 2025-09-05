@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学校購買部 - 営業時間</title>
+  <style>
+    /* ==== マウスストーカー ==== */
+    .mouse-stalker {
+      width: 20px;
+      height: 20px;
+      background-color: rgba(0, 138, 63, 0.6);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: top 0.15s ease-out, left 0.15s ease-out;
+    }
+
+    /* ==== 基本デザイン ==== */
+    body {
+      font-family: "Yu Gothic", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #005a2c;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      background-color: #008a3f;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      display: inline-block;
+      padding: 1em;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #006b2a;
+    }
+    main {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      color: #008a3f;
+      margin-bottom: 1em;
+    }
+    .hours-table {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1.5em;
+      margin: auto;
+      max-width: 500px;
+    }
+    .hours-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .hours-table th, .hours-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .hours-table th {
+      background-color: #f0f0f0;
+      color: #005a2c;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        padding: 0.8em;
+      }
+      main {
+        padding: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>学校購買部</h1>
+    <p>みんなの学校生活をサポート！</p>
+  </header>
+
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="products.html">商品紹介</a>
+    <a href="bento.html">お弁当</a>
+    <a href="about.html">購買部について</a>
+    <a href="hours.html">営業時間</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+
+  <main>
+    <h2>営業時間</h2>
+    <div class="hours-table">
+      <table>
+        <tr>
+          <th>曜日</th>
+          <th>営業時間</th>
+        </tr>
+        <tr>
+          <td>月〜金</td>
+          <td>8:00 ～ 16:00<br>(昼休憩 12:00 ～ 12:50)</td>
+        </tr>
+        <tr>
+          <td>土日・祝日</td>
+          <td>休業</td>
+        </tr>
+      </table>
+    </div>
+    <p style="margin-top:1.5em;">※ 学校行事や長期休暇の際は、営業時間が変更になる場合があります。</p>
+  </main>
+
+  <!-- マウスストーカー -->
+  <div class="mouse-stalker"></div>
+  <script>
+    const stalker = document.querySelector('.mouse-stalker');
+    document.addEventListener('mousemove', (e) => {
+      stalker.style.top = e.clientY + "px";
+      stalker.style.left = e.clientX + "px";
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 学校購買部 | 課題研究用の創作サイトです。</p>
+  </footer>
+</body>
+</html>
