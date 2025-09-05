@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学校購買部 - お弁当</title>
+  <style>
+    /* ==== マウスストーカー ==== */
+    .mouse-stalker {
+      width: 20px;
+      height: 20px;
+      background-color: rgba(0, 138, 63, 0.6);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: top 0.15s ease-out, left 0.15s ease-out;
+    }
+
+    /* ==== 基本スタイル ==== */
+    body {
+      font-family: "Yu Gothic", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #005a2c;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      background-color: #008a3f;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      display: inline-block;
+      padding: 1em;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #006b2a;
+    }
+    main {
+      padding: 2em;
+      text-align: center;
+    }
+    .bento {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 1.5em auto;
+      max-width: 600px;
+      padding: 1.5em;
+    }
+    .bento img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .bento h3 {
+      color: #008a3f;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        padding: 0.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>学校購買部</h1>
+    <p>みんなの学校生活をサポート！</p>
+  </header>
+
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="products.html">商品紹介</a>
+    <a href="bento.html">お弁当</a>
+    <a href="about.html">購買部について</a>
+    <a href="hours.html">営業時間</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+
+  <main>
+    <h2>今日のお弁当</h2>
+
+    <div class="bento">
+      <h3>日替わり弁当</h3>
+      <img src="https://placehold.co/500x300?text=%E6%97%A5%E6%9B%BF%E3%82%8F%E3%82%8A%E5%BC%81%E5%BD%93" alt="日替わり弁当">
+      <p>栄養バランスばっちり！毎日変わる人気メニュー。</p>
+    </div>
+
+    <div class="bento">
+      <h3>からあげ弁当</h3>
+      <img src="https://placehold.co/500x300?text=%E3%81%8B%E3%82%89%E3%81%82%E3%81%92%E5%BC%81%E5%BD%93" alt="からあげ弁当">
+      <p>ジューシーな唐揚げがぎっしり！学生に大人気。</p>
+    </div>
+
+    <div class="bento">
+      <h3>のり弁当</h3>
+      <img src="https://placehold.co/500x300?text=%E3%81%AE%E3%82%8A%E5%BC%81%E5%BD%93" alt="のり弁当">
+      <p>シンプルだけど飽きない定番のお弁当です。</p>
+    </div>
+  </main>
+
+  <!-- マウスストーカー -->
+  <div class="mouse-stalker"></div>
+  <script>
+    const stalker = document.querySelector('.mouse-stalker');
+    document.addEventListener('mousemove', (e) => {
+      stalker.style.top = e.clientY + "px";
+      stalker.style.left = e.clientX + "px";
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 学校購買部 | 課題研究用の創作サイトです。</p>
+  </footer>
+</body>
+</html>
