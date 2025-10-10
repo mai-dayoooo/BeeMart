@@ -77,6 +77,30 @@
         padding: 1em;
       }
     }
+    /* ==== ハチさんふわふわアニメーション ==== */
+    .fuwafuwa {
+      animation: fuwafuwa 3s ease-in-out infinite alternate;
+      background: url('ハチさん.png') no-repeat center center / 150px auto;
+      display: inline-block;
+      transition: 1.5s ease-in-out;
+      width: 150px;
+      height: 150px;
+      margin-top: 30px;
+    }
+
+    @keyframes fuwafuwa {
+      0% {
+        transform: translate(0, 0) rotate(-7deg);
+      }
+      50% {
+        transform: translate(0, -7px) rotate(0deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(7deg);
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -109,12 +133,23 @@
       <h3>取り扱い商品</h3>
       <ul>
         <li>文房具（ノート・ペン・ファイル・マーカーなど）</li>
-        <li>お弁当</li>
+        <li>お弁当・軽食</li>
+        <li>部活動向けグッズ（タオル・ドリンク・補助用品）</li>
       </ul>
     </div>
 
-  
+    <div class="about-section">
+      <h3>私たちの思い</h3>
+      <p>
+        購買部は、ただ物を売る場所ではなく「生徒同士の交流を生み出す場」でもあります。  
+        休み時間に立ち寄ってホッと一息ついたり、新しい発見をしたり…。  
+        そんな憩いの場を目指しています。
+      </p>
+    </div>
   </main>
+
+      <!-- 🐝ふわふわハチさん -->
+    <center>  <div class="fuwafuwa"></div> </center>
 
   <!-- マウスストーカー -->
   <div class="mouse-stalker"></div>
