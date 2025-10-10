@@ -73,6 +73,30 @@
         padding: 0.8em;
       }
     }
+    /* ==== ハチさんふわふわアニメーション ==== */
+    .fuwafuwa {
+      animation: fuwafuwa 3s ease-in-out infinite alternate;
+      background: url('ハチさん.png') no-repeat center center / 150px auto;
+      display: inline-block;
+      transition: 1.5s ease-in-out;
+      width: 150px;
+      height: 150px;
+      margin-top: 30px;
+    }
+
+    @keyframes fuwafuwa {
+      0% {
+        transform: translate(0, 0) rotate(-7deg);
+      }
+      50% {
+        transform: translate(0, -7px) rotate(0deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(7deg);
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -91,7 +115,7 @@
   </nav>
 
   <main>
-    <h2>お弁当一覧</h2>
+    <h2>今日のお弁当</h2>
 
     <div class="bento">
       <h3>日替わり弁当</h3>
@@ -102,15 +126,18 @@
     <div class="bento">
       <h3>からあげ弁当</h3>
       <img src="https://placehold.co/500x300?text=%E3%81%8B%E3%82%89%E3%81%82%E3%81%92%E5%BC%81%E5%BD%93" alt="からあげ弁当">
-      <p>、、、、</p>
+      <p>ジューシーな唐揚げがぎっしり！学生に大人気。</p>
     </div>
 
     <div class="bento">
-      <h3>ソースチキン弁当</h3>
+      <h3>のり弁当</h3>
       <img src="https://placehold.co/500x300?text=%E3%81%AE%E3%82%8A%E5%BC%81%E5%BD%93" alt="のり弁当">
-      <p>、、、、、</p>
+      <p>シンプルだけど飽きない定番のお弁当です。</p>
     </div>
   </main>
+
+     <!-- 🐝ふわふわハチさん -->
+    <center>  <div class="fuwafuwa"></div></center>
 
   <!-- マウスストーカー -->
   <div class="mouse-stalker"></div>
