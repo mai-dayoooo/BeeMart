@@ -88,6 +88,30 @@
         padding: 1em;
       }
     }
+    /* ==== ハチさんふわふわアニメーション ==== */
+    .fuwafuwa {
+      animation: fuwafuwa 3s ease-in-out infinite alternate;
+      background: url('ハチさん.png') no-repeat center center / 150px auto;
+      display: inline-block;
+      transition: 1.5s ease-in-out;
+      width: 150px;
+      height: 150px;
+      margin-top: 30px;
+    }
+
+    @keyframes fuwafuwa {
+      0% {
+        transform: translate(0, 0) rotate(-7deg);
+      }
+      50% {
+        transform: translate(0, -7px) rotate(0deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(7deg);
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -115,7 +139,7 @@
         </tr>
         <tr>
           <td>月〜金</td>
-          <td>8:30 ～ 13:00</td>
+          <td>8:00 ～ 16:00<br>(昼休憩 12:00 ～ 12:50)</td>
         </tr>
         <tr>
           <td>土日・祝日</td>
@@ -123,8 +147,12 @@
         </tr>
       </table>
     </div>
+
     <p style="margin-top:1.5em;">※ 学校行事や長期休暇の際は、営業時間が変更になる場合があります。</p>
   </main>
+
+     <!-- 🐝ふわふわハチさん -->
+      <center><div class="fuwafuwa"></div></center>
 
   <!-- マウスストーカー -->
   <div class="mouse-stalker"></div>
